@@ -9,6 +9,8 @@ import { createTables } from './database/migrations.js'
 import { pool } from './database/pool.js'
 import { errorHandler } from './middlewares/errorHandlerMidleware.js'
 import { validateOrigin } from './middlewares/validateOrigin.js'
+import { fileURLToPath } from 'url';
+import path from 'path';
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -24,11 +26,16 @@ const limiter = rateLimit({
   message: { error: 'Muitas requisições. Tente novamente mais tarde.' },
 })
 
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
 app.use(express.json())
 app.use(cors(corsOptions))
 app.set('view engine', 'ejs')
-app.set('views', './views')
-app.use(express.static('./public'))
+app.set('views', path.join(__dirname, '..', 'views'));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/', (req, res) => {
   res.render('index')
