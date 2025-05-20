@@ -8,7 +8,6 @@ import { validateUrlRequest } from './middlewares/urlShortenerlMiddleware.js'
 import { createTables } from './database/migrations.js'
 import { pool } from './database/pool.js'
 import { errorHandler } from './middlewares/errorHandlerMidleware.js'
-import { validateOrigin } from './middlewares/validateOrigin.js'
 import { fileURLToPath } from 'url';
 import path from 'path';
 
@@ -45,7 +44,6 @@ app.use('/', redirectRoute)
 
 app.use(
   '/api/shorten',
-  validateOrigin,
   validateUrlRequest,
   limiter,
   shortenerRoute,
