@@ -57,3 +57,5 @@ pool
   .catch((err) => {
     console.error('Erro ao conectar com o banco de dados', err)
   })
+
+export default app
