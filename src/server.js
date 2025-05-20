@@ -11,7 +11,7 @@ import { errorHandler } from './middlewares/errorHandlerMidleware.js'
 import { validateOrigin } from './middlewares/validateOrigin.js'
 
 const app = express()
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 const corsOptions = {
   origin: process.env.ORIGIN,
@@ -57,13 +57,3 @@ pool
   .catch((err) => {
     console.error('Erro ao conectar com o banco de dados', err)
   })
-
-app.listen(
-  {
-    port,
-    host: '0.0.0.0',
-  },
-  () => {
-    console.log('Server stated!!!')
-  },
-)
