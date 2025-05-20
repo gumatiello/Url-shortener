@@ -1,0 +1,27 @@
+:root {
+  --background-color: oklch(98.5% 0 0);
+  --secondary-background-color: oklch(20.5% 0 0);
+  --primary-color: oklch(58.5% 0.233 277.117);
+  --secondary-color: oklch(55.6% 0 0);
+  --white-color: oklch(100% 0 0);
+  --black-color: oklch(0% 0 0);
+}
+
+*{
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--background-color);
+  color: var(--black-color);
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+}

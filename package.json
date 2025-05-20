@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "lithium-url",
   "version": "1.0.0",
   "description": "",
@@ -13,5 +14,31 @@
     "body-parser": "^1.20.0",
     "express": "^4.18.1",
     "sqlite3": "^5.0.11"
+=======
+  "name": "urlshortener",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "itsLifeZ",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "nanoid": "^5.1.5",
+    "pg": "^8.15.6",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@nebulaz/eslint-config": "^1.0.1"
+>>>>>>> 9aee401 (Reescreve código antigo com nova estrutura e com frontend)
   }
 }

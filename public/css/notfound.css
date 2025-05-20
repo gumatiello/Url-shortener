@@ -1,0 +1,49 @@
+.app {
+  display: flex;
+  flex: 1;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 21rem;
+}
+
+.text-wrapper h1 {
+  color: var(--primary-color);
+}
+
+.text-wrapper span {
+  font-weight: bold;
+}
+
+.controller-wrapper {
+  margin-top: 1.3rem;
+}
+
+.controller-wrapper a {
+  cursor: pointer;
+  text-decoration: none;
+  min-height: 30px;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.controller-wrapper a:hover {
+  transition: background-color 0.3s ease;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
