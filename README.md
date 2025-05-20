@@ -28,4 +28,3 @@ Possui uma interface web com **EJS**, backend com **Express.js**, e persistênci
     # Acesse no navegador
     http://localhost:3000
   ```
->>>>>>> 9aee401 (Reescreve código antigo com nova estrutura e com frontend)
