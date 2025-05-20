@@ -9,6 +9,7 @@ import { createTables } from './database/migrations.js'
 import { pool } from './database/pool.js'
 import { errorHandler } from './middlewares/errorHandlerMidleware.js'
 import { validateOrigin } from './middlewares/validateOrigin.js'
+import serverless from "serverless-http";
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -58,4 +59,4 @@ pool
     console.error('Erro ao conectar com o banco de dados', err)
   })
 
-export default app
+export const handler = serverless(app);
